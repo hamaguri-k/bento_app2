@@ -26,4 +26,9 @@ class ShiftsController < ApplicationController
     def shift_params
       params.require(:shift).permit(:id, :monday, :tuesday, :wednesday, :thursday, :friday)
     end
+
+    def reset_shifts
+      ShiftReset.new.shift_reset
+      redirect_to shifts_path, notice: 'シフトがリセットされました。'
+    end
 end
