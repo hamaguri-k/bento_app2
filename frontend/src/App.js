@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Input } from './containers/Input';
 import { Result } from './containers/Result';
 import { Admin } from './containers/Admin';
+import { List } from './containers/List';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Route path="/input" element={<Input />} />
         <Route path="/result" element={<Result />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/list" element={<List />} />
       </Routes>
     </Router>
   );
