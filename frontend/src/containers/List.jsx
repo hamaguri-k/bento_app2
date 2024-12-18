@@ -39,11 +39,11 @@ return(
             
                 <tr key={shift.id}>
                     <td>{nameChange(shift.name)}</td> 
-                    <td>{booleanChange(shift.monday)}</td>
-                    <td>{booleanChange(shift.tuesday)}</td>
-                    <td>{booleanChange(shift.wednesday)}</td>
-                    <td>{booleanChange(shift.thursday)}</td>
-                    <td>{booleanChange(shift.friday)}</td>
+                    <td align="center">{booleanChange(shift.monday)}</td>
+                    <td align="center">{booleanChange(shift.tuesday)}</td>
+                    <td align="center">{booleanChange(shift.wednesday)}</td>
+                    <td align="center">{booleanChange(shift.thursday)}</td>
+                    <td align="center">{booleanChange(shift.friday)}</td>
                 </tr>
             
         )
