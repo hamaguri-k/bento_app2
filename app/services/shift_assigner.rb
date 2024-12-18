@@ -2,11 +2,18 @@ class ShiftAssigner
     def assign_shifts
       days = %w[monday tuesday wednesday thursday friday]
 
+      # 各曜日の該当者数をカウントし、少ない順に並び替え
+      days_with_counts = days.map do |day|
+        [day, Shift.where(day => true).count]
+      end
+
+      # 該当者数が少ない順に並び替え
+      sorted_days = days_with_counts.sort_by { |_, count| count }.map(&:first)
     
       # 各ユーザーの割り当て回数を記録するハッシュ
         user_assignment_count = Hash.new(0)
 
-      days.each do |day|
+      sorted_days.each do |day|
         available_users = Shift.where(day => true).pluck(:id)
         next if available_users.empty?
   

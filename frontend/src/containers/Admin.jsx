@@ -15,11 +15,26 @@ export const Admin = () => {
           });
       };
 
+      const ShiftAsign = (e) => {
+        e.preventDefault();
+        axios
+          .post(`http://localhost:3000/shifts/shift_assign`) 
+          .then(() => {
+            alert("シフトが正常に設定されました！");
+          })
+          .catch((error) => {
+            console.error("Error updating shift:", error);
+          });
+      }
+
     return(
         <div>
             <button
                 onClick={ShiftChange}
             >シフトをリセットする</button>
+            <button
+                onClick={ShiftAsign}
+            >シフトを設定する</button>
         </div>
     )
 }

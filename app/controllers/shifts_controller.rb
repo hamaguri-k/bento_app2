@@ -31,4 +31,9 @@ class ShiftsController < ApplicationController
       ShiftReset.new.shift_reset
       redirect_to shifts_path, notice: 'シフトがリセットされました。'
     end
+
+    def shift_assign
+      ShiftAssigner.new.assign_shifts
+      redirect_to shifts_path, notice: 'シフトが設定されました。'
+    end
 end
