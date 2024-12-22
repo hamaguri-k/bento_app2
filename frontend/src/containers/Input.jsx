@@ -1,6 +1,7 @@
 import { ShiftSelect } from "./selector/ShiftSelect"
 import { YourName } from "./selector/YourName"
 import React, { useState, useEffect } from "react"
+import styled from 'styled-components';
 import axios from "axios"
 
 export const Input = () => {
@@ -35,17 +36,29 @@ export const Input = () => {
       };
       console.log(shiftData)
 
+
+      const Wrapper = styled.div`
+        text-align: center;
+      `
+
+      const StyledButton = styled.button`
+      font-size: 24px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      `
+
+
     return(
-        <>
-        <form onSubmit={handleSubmit}>
-            <YourName handleChange={handleChange}/>
-            <ShiftSelect week="monday" handleChange={handleChange}/>
-            <ShiftSelect week="tuesday" handleChange={handleChange}/>
-            <ShiftSelect week="wednesday" handleChange={handleChange}/>
-            <ShiftSelect week="thursday" handleChange={handleChange}/>
-            <ShiftSelect week="friday" handleChange={handleChange}/>
-            <button type="submit">提出</button>
-        </form>
-        </>
+        <Wrapper>
+          <form onSubmit={handleSubmit}>
+              <YourName handleChange={handleChange}/>
+              <ShiftSelect week="monday" handleChange={handleChange}/>
+              <ShiftSelect week="tuesday" handleChange={handleChange}/>
+              <ShiftSelect week="wednesday" handleChange={handleChange}/>
+              <ShiftSelect week="thursday" handleChange={handleChange}/>
+              <ShiftSelect week="friday" handleChange={handleChange}/>
+              <StyledButton type="submit">提出</StyledButton>
+          </form>
+        </Wrapper>
     )
 }

@@ -1,18 +1,21 @@
 import { dayChange } from "../../method/dayChange"
+import styled from "styled-components"
+import { StyledLabel,StyledSelect } from "./Mycss"
+
 export const ShiftSelect = ({week, handleChange}) => {
 
     return(
         <div>
-            <label>
+            <StyledLabel>
                 {dayChange(week)}:
-                <select name={week} onChange={handleChange} defaultValue="false">
+                <StyledSelect name={week} onChange={handleChange} defaultValue="false">
                     {/* <option value="" disabled>
                         -- 選択してください --
                     </option> */}
                     <option value="true">可</option>
                     <option value="false">不可</option>
-                </select>
-            </label>
+                </StyledSelect>
+            </StyledLabel>
         </div>
             
     )
