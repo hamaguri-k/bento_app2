@@ -21,12 +21,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  # <<: *default
-  # database: db/production.sqlite3
-  adapter: postgresql
-  encoding: unicode
-  database: myapp_production
+  adapter: sqlite3
+  database: db/production.sqlite3
   pool: 5
-  username: your-db-username
-  password: your-db-password
-  host: localhost
+  timeout: 5000
