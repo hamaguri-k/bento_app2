@@ -1,4 +1,5 @@
 import axios from "axios";
+import { SHIFT_URL } from "../url";
 
 
 export const Admin = () => {
@@ -6,7 +7,7 @@ export const Admin = () => {
     const ShiftChange = (e) => {
         e.preventDefault();
         axios
-          .post(`http://localhost:3000/shifts/reset_shifts`) 
+          .post(`${SHIFT_URL}/reset_shifts`) 
           .then(() => {
             alert("シフトが正常にリセットされました！");
           })
@@ -18,7 +19,7 @@ export const Admin = () => {
       const ShiftAsign = (e) => {
         e.preventDefault();
         axios
-          .post(`http://localhost:3000/shifts/shift_assign`) 
+          .post(`${SHIFT_URL}/shift_assign`) 
           .then(() => {
             alert("シフトが正常に設定されました！");
           })

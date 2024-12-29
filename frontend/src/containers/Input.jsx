@@ -3,6 +3,7 @@ import { YourName } from "./selector/YourName"
 import React, { useState, useEffect } from "react"
 import styled from 'styled-components';
 import axios from "axios"
+import {SHIFT_URL} from "../url/index"
 
 export const Input = () => {
     const [shiftData, setShiftData] = useState({
@@ -26,7 +27,7 @@ export const Input = () => {
         e.preventDefault();
         const userId = shiftData.id;
         axios
-          .put(`http://localhost:3000/shifts/${userId}`, shiftData) // PUTリクエストでシフトを更新
+          .put(`${SHIFT_URL}/${userId}`, shiftData) // PUTリクエストでシフトを更新
           .then(() => {
             alert("Shift updated successfully!");
           })
