@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Shift.create([
+Shift.create!([
   { name: "oishi",
   monday: false,
   tuesday: false,
@@ -37,7 +37,7 @@ Shift.create([
   thursday: false,
   friday: false }
 ])
-Result.create([
+Result.create!([
     { day: "monday" },
     { day: "tuesday" },
     { day: "wednesday" },
