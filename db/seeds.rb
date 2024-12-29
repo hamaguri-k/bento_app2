@@ -38,9 +38,9 @@ Shift.create!([
   friday: false }
 ])
 Result.create!([
-    { day: "monday" },
-    { day: "tuesday" },
-    { day: "wednesday" },
-    { day: "thursday" },
-    { day: "friday" }
+    { day: "monday", name: "oishi", shift_id: 1 },
+    { day: "tuesday", name: "oishi", shift_id: 1  },
+    { day: "wednesday", name: "oishi", shift_id: 1  },
+    { day: "thursday", name: "oishi", shift_id: 1  },
+    { day: "friday", name: "oishi", shift_id: 1  }
   ])
