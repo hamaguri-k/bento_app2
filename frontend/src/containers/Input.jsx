@@ -42,10 +42,10 @@ export const Input = () => {
         axios
           .put(`${SHIFT_URL}/${userId}`, shiftData) // PUTリクエストでシフトを更新
           .then(() => {
-            alert("Shift updated successfully!");
+            alert("シフトが正しく登録されました。");
           })
           .catch((error) => {
-            console.error("Error updating shift:", error);
+            console.error("シフト登録エラーが発生しました。:", error);
           });
       };
       console.log(shiftData)
