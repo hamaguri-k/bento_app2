@@ -5,6 +5,19 @@ import styled from 'styled-components';
 import axios from "axios"
 import {SHIFT_URL} from "../url/index"
 
+
+const Wrapper = styled.div`
+        text-align: center;
+      `
+
+      const StyledButton = styled.button`
+      font-size: 24px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      `
+
+
+
 export const Input = () => {
     const [shiftData, setShiftData] = useState({
         id: "1",
@@ -38,15 +51,7 @@ export const Input = () => {
       console.log(shiftData)
 
 
-      const Wrapper = styled.div`
-        text-align: center;
-      `
-
-      const StyledButton = styled.button`
-      font-size: 24px;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      `
+      
 
 
     return(
