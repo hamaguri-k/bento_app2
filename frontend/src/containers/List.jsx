@@ -1,7 +1,6 @@
 import { fetchShift } from "../api/ShiftApi"
 import { useState, useEffect } from "react"
 import { booleanChange } from "../method/booleanChange"
-import { nameChange } from "../method/nameChange"
 import styled from "styled-components"
 
 export const List = () => {
@@ -50,7 +49,7 @@ return(
             return(
                 
                     <tr key={shift.id}>
-                        <td>{nameChange(shift.name)}</td> 
+                        <td>{shift.name}</td> 
                         <td align="center">{booleanChange(shift.monday)}</td>
                         <td align="center">{booleanChange(shift.tuesday)}</td>
                         <td align="center">{booleanChange(shift.wednesday)}</td>

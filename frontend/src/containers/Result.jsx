@@ -2,7 +2,6 @@ import { fetchResult } from "../api/ResultApi"
 import { useEffect } from "react"
 import { useState } from "react"
 import { dayChange } from "../method/dayChange"
-import { nameChange } from "../method/nameChange"
 import styled from "styled-components"
 
 export const Result = () => {
@@ -30,7 +29,7 @@ return(
         console.log(result)
         
         return(
-            <h2>{dayChange(result.day)}:{nameChange(result.name)}</h2>
+            <h2>{dayChange(result.day)}: {result.name}</h2>
         )
     })}
     </Wrapper>
