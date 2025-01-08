@@ -6,31 +6,25 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Shift.create!([
-  { name: "oishi",
+  { name: "大石",
   monday: false,
   tuesday: false,
   wednesday: false,
   thursday: false,
   friday: false },
-  { name: "Nanami",
+  { name: "大井",
   monday: false,
   tuesday: false,
   wednesday: false,
   thursday: false,
   friday: false },
-  { name: "Ishikawa",
+  { name: "鈴木",
   monday: false,
   tuesday: false,
   wednesday: false,
   thursday: false,
   friday: false },
-  { name: "Nakajima",
-  monday: false,
-  tuesday: false,
-  wednesday: false,
-  thursday: false,
-  friday: false },
-  { name: "Suzuki",
+  { name: "中嶋",
   monday: false,
   tuesday: false,
   wednesday: false,
@@ -38,9 +32,9 @@ Shift.create!([
   friday: false }
 ])
 Result.create!([
-    { day: "monday", name: "oishi", shift_id: 1 },
-    { day: "tuesday", name: "oishi", shift_id: 1  },
-    { day: "wednesday", name: "oishi", shift_id: 1  },
-    { day: "thursday", name: "oishi", shift_id: 1  },
-    { day: "friday", name: "oishi", shift_id: 1  }
+    { day: "monday", name: "大石", shift_id: 1 },
+    { day: "tuesday", name: "大石", shift_id: 1  },
+    { day: "wednesday", name: "大石", shift_id: 1  },
+    { day: "thursday", name: "大石", shift_id: 1  },
+    { day: "friday", name: "大石", shift_id: 1  }
   ])
