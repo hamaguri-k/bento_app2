@@ -10,6 +10,10 @@ export const Result = () => {
     useEffect(() => {
         fetchResult().then(data => {
             // console.log(data)
+            const sortedData = {
+                ...data,
+                results: data.results.sort((a, b) => a.id - b.id),
+            };
             setState(data)
             setLoading(false);
         } );
