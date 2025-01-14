@@ -6,6 +6,3 @@ bundle install
 
 echo "Running db:migrate..."
 bundle exec rails db:migrate
-
-echo "Running db:seed..."
-bundle exec rails db:seed
