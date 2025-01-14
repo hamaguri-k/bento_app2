@@ -11,7 +11,11 @@ export const YourName = ({handleChange}) => {
     const [shifts, setShifts] = useState({ shifts: [] });
     useEffect(() => {
         fetchShift().then(data => {
-            setShifts(data)
+            const sortedData = {
+                ...data,
+                shifts: data.shifts.sort((a, b) => a.id - b.id),
+            };
+            setShifts(sortedData)
         } );
     },[])
     return(

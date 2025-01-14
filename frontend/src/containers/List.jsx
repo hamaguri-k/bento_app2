@@ -9,7 +9,11 @@ export const List = () => {
     useEffect(() => {
         fetchShift().then(data => {
             // console.log(data)
-            setState(data)
+            const sortedData = {
+                ...data,
+                shifts: data.shifts.sort((a, b) => a.id - b.id),
+            };
+            setState(sortedData)
             setLoading(false);
         } );
     },[])
