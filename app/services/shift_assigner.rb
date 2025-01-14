@@ -15,7 +15,12 @@ class ShiftAssigner
 
       sorted_days.each do |day|
         available_users = Shift.where(day => true).pluck(:id)
-        next if available_users.empty?
+        if available_users.empty?
+          shiftDay = Result.find_by(day: day)
+          shiftDay.name = "祝日"
+          shiftDay.save
+          next
+        end
   
         # 割り当て回数が最小のユーザーを選択
         assigned_user_id = available_users.min_by { |user| user_assignment_count[user] }
