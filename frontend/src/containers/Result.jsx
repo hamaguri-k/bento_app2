@@ -14,7 +14,7 @@ export const Result = () => {
                 ...data,
                 results: data.results.sort((a, b) => a.id - b.id),
             };
-            setState(data)
+            setState(sortedData)
             setLoading(false);
         } );
     },[])
